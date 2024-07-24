@@ -1,0 +1,240 @@
+/* Bendri stiliai visam puslapiui */
+body {
+    font-family: Arial, sans-serif; /* Nustato šriftą */
+    margin: 0; /* Pašalina numatytus margin */
+    padding: 0; /* Pašalina numatytus padding */
+    box-sizing: border-box; /* Užtikrina, kad padding ir border būtų įtraukti į elementų matmenis */
+    display: flex; /* Nustato lankstų konteinerį */
+    flex-direction: column; /* Nustato elementų išdėstymo kryptį stulpeliais */
+    min-height: 100vh; /* Nustato minimalų puslapio aukštį */
+}
+
+/* Root elemento stiliai */
+#root {
+    display: flex; /* Nustato lankstų konteinerį */
+    flex-direction: column; /* Nustato elementų išdėstymo kryptį stulpeliais */
+    flex-grow: 1; /* Leidžia elementui augti ir užpildyti likusią erdvę */
+}
+
+/* Navigacijos juostos stiliai */
+nav {
+    background-color: darkblue; /* Nustato navigacijos juostos foną tamsiai mėlynos spalvos */
+    color: white; /* Nustato tekstą baltos spalvos */
+    padding: 10px; /* Nustato padding aplink navigacijos juostos turinį */
+}
+
+/* Navigacijos juostos pavadinimo stiliai */
+nav h1 {
+    margin: 0; /* Pašalina numatytą margin */
+    display: inline-block; /* Nustato, kad elementas būtų rodomas kaip inline-block */
+}
+
+/* Navigacijos juostos nuorodų sąrašo stiliai */
+nav ul {
+    list-style: none; /* Pašalina sąrašo ženklelius */
+    display: flex; /* Nustato lankstų konteinerį */
+    justify-content: space-around; /* Paskirsto sąrašo elementus vienodai */
+    padding: 0; /* Pašalina numatytą padding */
+}
+
+/* Navigacijos juostos nuorodų sąrašo elementų stiliai */
+nav ul li {
+    /* Stiliai nuorodoms ir mygtukams */
+    a, button {
+        color: white; /* Nustato tekstą baltos spalvos */
+        text-decoration: none; /* Pašalina nuorodų pabraukimą */
+        background: none; /* Pašalina numatytą mygtukų foną */
+        border: none; /* Pašalina numatytą mygtukų rėmelį */
+        cursor: pointer; /* Nustato pelės žymeklį kaip rodyklę */
+        font: inherit; /* Perima tėvinio elemento šriftą */
+
+        /* Hover efektai nuorodoms ir mygtukams */
+        &:hover {
+            text-decoration: underline; /* Prideda pabraukimą, kai pelė yra virš elemento */
+        }
+    }
+}
+
+/* Puslapio apačios (footer) stiliai */
+footer {
+    background-color: darkblue; /* Nustato footer foną tamsiai mėlynos spalvos */
+    color: white; /* Nustato tekstą baltos spalvos */
+    padding: 10px 0; /* Nustato padding viršuje ir apačioje */
+    text-align: center; /* Centruoja tekstą */
+    margin-top: auto; /* Leidžia footer prisijungti prie puslapio apačios */
+    width: 100%; /* Nustato plotį per visą puslapio plotį */
+    position: fixed; /* Fiksuoja footer apačioje */
+    bottom: 0; /* Fiksuoja footer apačioje */
+}
+
+/* Prisijungimo ir registracijos puslapių stiliai */
+.login-page, .register-page {
+    display: flex; /* Nustato lankstų konteinerį */
+    flex-direction: column; /* Nustato elementų išdėstymo kryptį stulpeliais */
+    align-items: center; /* Centruoja elementus horizontaliai */
+    justify-content: center; /* Centruoja elementus vertikaliai */
+    flex-grow: 1; /* Leidžia elementui augti ir užpildyti likusią erdvę */
+    padding: 20px; /* Nustato padding aplink turinį */
+}
+
+/* Formos stiliai prisijungimo ir registracijos puslapiuose */
+.login-page form, .register-page form {
+    display: flex; /* Nustato lankstų konteinerį */
+    flex-direction: column; /* Nustato elementų išdėstymo kryptį stulpeliais */
+    max-width: 400px; /* Nustato maksimalų formos plotį */
+    width: 100%; /* Nustato formos plotį per visą turimos vietos plotį */
+}
+
+/* Formos įvedimo laukelių ir mygtukų stiliai */
+.login-page form input, .register-page form input, .login-page form button, .register-page form button {
+    margin: 10px 0; /* Nustato margin viršuje ir apačioje */
+    padding: 12px; /* Nustato padding aplink turinį */
+    font-size: 16px; /* Nustato šrifto dydį */
+    border: 2px solid #ccc; /* Nustato rėmelį */
+    border-radius: 4px; /* Nustato užapvalintus kampus */
+}
+
+/* Mygtuko stiliai prisijungimo ir registracijos formose */
+.login-page form button, .register-page form button {
+    background-color: darkblue; /* Nustato foną tamsiai mėlynos spalvos */
+    color: white; /* Nustato tekstą baltos spalvos */
+
+    /* Hover efektai mygtukams */
+    &:hover {
+        background-color: #000080; /* Pakeičia foną, kai pelė yra virš elemento */
+    }
+}
+
+/* Skelbimų sąrašo stiliai */
+.ad-list {
+    display: flex; /* Nustato lankstų konteinerį */
+    flex-wrap: wrap; /* Leidžia elementams užpildyti kelias eilutes */
+    justify-content: space-around; /* Paskirsto elementus vienodai */
+    gap: 20px; /* Nustato tarpus tarp elementų */
+    padding: 20px; /* Nustato padding aplink turinį */
+}
+
+/* Skelbimo kortelės apvalkalo stiliai */
+.ad-card-wrapper {
+    position: relative; /* Nustato reliatyvią poziciją */
+    width: calc(24% - 20px); /* Nustato plotį */
+    margin: 0px; /* Pašalina numatytą margin */
+}
+
+/* Skelbimo kortelės stiliai */
+.ad-card {
+    background-color: #f9f9f9; /* Nustato foną šviesiai pilkos spalvos */
+    border: 1px solid #656464; /* Nustato rėmelį */
+    border-radius: 8px; /* Nustato užapvalintus kampus */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Nustato šešėlį */
+    overflow: hidden; /* Paslepia perteklių */
+    width: 100%; /* Nustato plotį per visą turimos vietos plotį */
+}
+
+/* Skelbimo kortelės paveikslėlio stiliai */
+.ad-card img {
+    width: 100%; /* Nustato plotį per visą turimos vietos plotį */
+    height: auto; /* Išlaiko proporcijas */
+}
+
+/* Skelbimo informacijos stiliai */
+.ad-card .ad-info {
+    padding: 16px; /* Nustato padding aplink turinį */
+}
+
+/* Skelbimo pavadinimo stiliai */
+.ad-card .ad-info h3 {
+    margin: 0 0 10px; /* Nustato margin apačioje */
+}
+
+/* Skelbimo aprašymo stiliai */
+.ad-card .ad-info p {
+    margin: 5px 0; /* Nustato margin viršuje ir apačioje */
+}
+
+/* Skelbimo pridėjimo/atnaujinimo formos stiliai */
+.add-ad-form {
+    margin: 20px auto; /* Nustato margin viršuje ir apačioje, centruoja horizontaliai */
+    max-width: 600px; /* Nustato maksimalų plotį */
+    min-width: 400px; /* Nustato minimalų plotį */
+    padding: 20px; /* Nustato padding aplink turinį */
+    border: 1px solid #ccc; /* Nustato rėmelį */
+    border-radius: 8px; /* Nustato užapvalintus kampus */
+    background-color: #f9f9f9; /* Nustato foną šviesiai pilkos spalvos */
+}
+
+/* Skelbimo pridėjimo/atnaujinimo formos antraštės stiliai */
+.add-ad-form h2 {
+    margin-bottom: 20px; /* Nustato margin apačioje */
+}
+
+/* Formos grupės stiliai skelbimo pridėjimo/atnaujinimo formoje */
+.add-ad-form .form-group {
+    margin-bottom: 15px; /* Nustato margin apačioje */
+}
+
+/* Formos grupės etikečių stiliai skelbimo pridėjimo/atnaujinimo formoje */
+.add-ad-form .form-group label {
+    display: block; /* Rodo kaip bloką */
+    margin-bottom: 5px; /* Nustato margin apačioje */
+}
+
+/* Formos grupės įvedimo laukelių stiliai skelbimo pridėjimo/atnaujinimo formoje */
+.add-ad-form .form-group input {
+    width: 100%; /* Nustato plotį per visą turimos vietos plotį */
+    padding: 10px; /* Nustato padding aplink turinį */
+    font-size: 16px; /* Nustato šrifto dydį */
+    border: 1px solid #ccc; /* Nustato rėmelį */
+    border-radius: 4px; /* Nustato užapvalintus kampus */
+}
+
+/* Mygtuko stiliai skelbimo pridėjimo/atnaujinimo formoje */
+.add-ad-form button {
+    background-color: darkblue; /* Nustato foną tamsiai mėlynos spalvos */
+    color: white; /* Nustato tekstą baltos spalvos */
+    padding: 10px 20px; /* Nustato padding aplink turinį */
+    border: none; /* Pašalina rėmelį */
+    border-radius: 4px; /* Nustato užapvalintus kampus */
+    cursor: pointer; /* Nustato pelės žymeklį kaip rodyklę */
+
+    /* Hover efektai mygtukams */
+    &:hover {
+        background-color: #000080; /* Pakeičia foną, kai pelė yra virš elemento */
+    }
+}
+
+/* Skelbimo kortelės veiksmų stiliai */
+.ad-card-actions {
+    position: absolute; /* Nustato absoliučią poziciją */
+    top: 10px; /* Nustato poziciją 10px nuo viršaus */
+    right: 10px; /* Nustato poziciją 10px nuo dešinės */
+  
+    .delete-button {
+      background-color: red; /* Nustato foną raudonos spalvos */
+      color: white; /* Nustato tekstą baltos spalvos */
+      border: none; /* Pašalina rėmelį */
+      padding: 5px 10px; /* Nustato padding aplink turinį */
+      cursor: pointer; /* Nustato pelės žymeklį kaip rodyklę */
+      border-radius: 4px; /* Nustato užapvalintus kampus */
+  
+      &:hover {
+        background-color: darkred; /* Pakeičia foną, kai pelė yra virš elemento */
+      }
+    }
+  
+    .update-button {
+      background-color: blue; /* Nustato foną mėlynos spalvos */
+      color: white; /* Nustato tekstą baltos spalvos */
+      border: none; /* Pašalina rėmelį */
+      padding: 5px 10px; /* Nustato padding aplink turinį */
+      cursor: pointer; /* Nustato pelės žymeklį kaip rodyklę */
+      border-radius: 4px; /* Nustato užapvalintus kampus */
+      margin-right: 5px; /* Nustato tarpą tarp mygtukų */
+  
+      &:hover {
+        background-color: darkblue; /* Pakeičia foną, kai pelė yra virš elemento */
+      }
+    }
+  }
+  
+  
